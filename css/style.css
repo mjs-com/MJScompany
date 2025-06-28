@@ -361,8 +361,15 @@ a {
   }
   
   .hero {
-    height: 100vh; /* フルスクリーン表示 */
+    height: 50vh !important; /* フルスクリーン表示 */
     padding-top: 56px; /* ヘッダー分のパディング */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    padding-top: 0px; /* ヒーロータイトルを上寄せで配置 */
   }
   
   /* Desktop navigation hidden on mobile */
@@ -669,6 +676,21 @@ a {
     display: none !important;
   }
   
+  /* Center align credential spans on mobile */
+  .hero-credentials {
+    justify-content: center;
+  }
+  
+  .credential,
+  .credential-item,
+  .proof-item {
+    justify-content: center;
+  }
+  
+  .credential-grid {
+    justify-items: center;
+  }
+  
   /* CTA navigation link style */
   .cta-nav {
     background: var(--gradient-primary) !important;
@@ -776,7 +798,7 @@ a {
   align-items: center;
   gap: var(--spacing-sm);
   opacity: 0.8;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xl);
 }
 
 .credential i {
