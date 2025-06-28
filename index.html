@@ -1,25 +1,427 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MJScompany-HP</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合同会社MJSカンパニー | 現場の痛みを知る現役医師による医療DX支援</title>
     
-        <!-- Reset CSS CDN -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
-        
-        <!-- Google Fonts CDN-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-        
-        <!-- Font Awesome CDN-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="現役医師が率いる医療DX専門企業。AI音声入力カルステップ、医療機関DX化支援、医療記事執筆・監修サービスを提供。医療現場の課題を深く理解した実践的なソリューション。">
+    <meta name="keywords" content="医療DX,AI音声入力,カルステップ,医療機関,電子カルテ,医療記事,監修,現役医師,コンサルティング">
     
-        <!-- style.css -->
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+    <!-- OGP Meta Tags -->
+    <meta property="og:title" content="合同会社MJSカンパニー | 現場の痛みを知る現役医師による医療DX支援">
+    <meta property="og:description" content="現役医師が率いる医療DX専門企業。AI音声入力カルステップ、医療機関DX化支援、医療記事執筆・監修サービスを提供。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mjscompany.github.io/">
+    <meta property="og:image" content="https://mjscompany.github.io/img/karustep_hero.png">
+    <meta property="og:site_name" content="合同会社MJSカンパニー">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="合同会社MJSカンパニー | 現場の痛みを知る現役医師による医療DX支援">
+    <meta name="twitter:description" content="現役医師が率いる医療DX専門企業。AI音声入力カルステップ、医療機関DX化支援、医療記事執筆・監修サービスを提供。">
+    <meta name="twitter:image" content="https://mjscompany.github.io/img/karustep_hero.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Reset CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="/">
+                    <img src="img/mjs_logo.png" alt="合同会社MJSカンパニー" class="logo-img">
+                </a>
+            </div>
+            <div class="header-right">
+                <nav class="header-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">事業内容</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://karustep.netlify.app/" target="_blank" class="dropdown-link">AI音声入力『カルステップ』</a></li>
+                                <li><a href="#dx-support" class="dropdown-link">医療機関DX化支援</a></li>
+                                <li><a href="#medical-writing" class="dropdown-link">医療記事 執筆・監修</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#cases" class="nav-link">実績・事例</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">私たちについて</a></li>
+                        <li class="nav-item"><a href="#news" class="nav-link">お知らせ</a></li>
+                        <li class="nav-item mobile-only"><a href="#contact" class="nav-link cta-nav">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="#contact" class="cta-button primary">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-animation">
+            <canvas id="hero-canvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-container">
+                <h1 class="hero-title">
+                    <span class="title-line">現場の痛みを知る<br>現役医師だから</span>
+                    <span class="title-line accent">提案できる解決策がある。</span>
+                </h1>
+                <p class="hero-subtitle">
+                    AI技術と医療現場の深い知見で、<br>クリニックの課題解決からメディアの信頼性向上までを支援します。
+                </p>
+                <div class="hero-cta">
+                    <a href="#services" class="cta-button primary large">事業内容を見る</a>
+                    <a href="#contact" class="cta-button secondary large">無料相談する</a>
+                </div>
+                <div class="hero-credentials">
+                    <div class="credential">
+                        <i class="fas fa-user-md"></i>
+                        <span>救急科・集中治療科専門医</span>
+                    </div>
+                    <div class="credential">
+                        <i class="fas fa-award"></i>
+                        <span>Yahoo!ニュース掲載実績多数</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Gateway Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">3つの専門サービス</h2>
+                <p class="section-subtitle">医療現場を知り尽くした現役医師だから提供できる、実践的なソリューション</p>
+            </div>
+            <div class="services-grid">
+                <!-- カルステップ -->
+                <div class="service-card karustep">
+                    <div class="service-visual">
+                        <img src="img/karustep_hero.png" alt="AI音声入力カルステップ" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">カルステップ</h3>
+                        <p class="service-tagline">もう、患者から目を離さない。<br>フットスイッチが創る、<br>理想の診察体験。</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-yen-sign"></i>月額固定費なし、1分約1円の低コスト</li>
+                            <li><i class="fas fa-hand-paper"></i>フットスイッチによるハンズフリー操作</li>
+                            <li><i class="fas fa-share-alt"></i>リアルタイム共有と柔軟性</li>
+                        </ul>
+                        <div class="service-cta">
+                            <a href="https://karustep.netlify.app/" target="_blank" class="cta-button primary">製品LPで詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DX支援 -->
+                <div class="service-card dx-support" id="dx-support">
+                    <div class="service-visual">
+                        <img src="img/medical_dx.jpg" alt="医療機関DX化支援" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">医療機関DX化支援</h3>
+                        <p class="service-tagline">AI開発ノウハウを持つ現役医師が、<br>あなたのクリニックだけの最適解を処方します。</p>
+                        <div class="pain-points">
+                            <h4>こんなお悩みありませんか？</h4>
+                            <ul class="pain-list">
+                                <li>日々のカルテ入力に追われている</li>
+                                <li>スタッフの残業が減らない</li>
+                                <li>デジタル化を進めたいが何から始めれば...</li>
+                            </ul>
+                        </div>
+                        <div class="solution-steps">
+                            <div class="step">
+                                <i class="fas fa-stethoscope"></i>
+                                <span>現状把握</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-prescription"></i>
+                                <span>最適解の提案</span>
+                            </div>
+                            <div class="step">
+                                <i class="fas fa-chart-line"></i>
+                                <span>導入・運用支援</span>
+                            </div>
+                        </div>
+                        <div class="service-cta">
+                            <a href="#contact" class="cta-button primary">まずは無料で相談する</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 医療記事執筆 -->
+                <div class="service-card medical-writing" id="medical-writing">
+                    <div class="service-visual">
+                        <img src="img/writing_doctor.jpg" alt="医療記事執筆医師" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">医療記事 執筆・監修</h3>
+                        <p class="service-tagline">「専門医監修」の権威性で、<br>貴社メディアの信頼性を最大化しませんか？</p>
+                        <div class="authority-proof">
+                            <div class="proof-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>救急科・集中治療科など複数の専門医資格</span>
+                            </div>
+                            <div class="proof-item">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Yahoo!ニュース掲載実績多数</span>
+                            </div>
+                            <div class="proof-item">
+                                <i class="fas fa-users"></i>
+                                <span>月100本単位の大量発注にも対応可能</span>
+                            </div>
+                        </div>
+                        <div class="service-cta">
+                            <a href="#contact" class="cta-button primary">執筆・監修を相談する</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">私たちについて</h2>
+                    <div class="company-vision">
+                        <h3 class="vision-title">「現場の痛みを知る現役医師だから、提案できる解決策がある」</h3>
+                        <p class="vision-text">
+                            私たちは、医療現場の最前線で日々患者と向き合う現役医師が率いる、医療課題解決の専門家チームです。
+                            机上の空論ではない、現場のリアルな課題感に基づいたソリューションを提供することをお約束します。
+                        </p>
+                    </div>
+                    <div class="ceo-intro">
+                        <h4>代表者プロフィール</h4>
+                        <div class="ceo-credentials">
+                            <div class="credential-grid">
+                                <div class="credential-item">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>医学博士</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-ambulance"></i>
+                                    <span>救急科専門医</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span>集中治療専門医</span>
+                                </div>
+                                <div class="credential-item">
+                                    <i class="fa-solid fa-dna"></i>
+                                    <span>日本抗加齢医学会専門医</span>
+                                </div>
+                                <div class="credential-item mobile-hidden">
+                                    <i class="fas fa-helicopter"></i>
+                                    <span>ドクターヘリ指導者</span>
+                                </div>
+                                <div class="credential-item mobile-hidden">
+                                    <i class="fas fa-kit-medical"></i>
+                                    <span>日本DMAT隊員</span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="about-cta">
+                        <a href="about.html" class="cta-button secondary">詳しいプロフィールを見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">実績ハイライト</h2>
+                <p class="section-subtitle">各事業での代表的な成果をご紹介</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case-item">
+                    <div class="case-category">AI音声入力</div>
+                    <h3 class="case-title">カルステップ</h3>
+                    <p class="case-description">医師の診察時間を大幅に改善する革新的AIシュライバーシステム</p>
+                </div>
+                <div class="case-item">
+                    <div class="case-category">記事執筆・監修</div>
+                    <h3 class="case-title">Yahoo!ニュース掲載</h3>
+                    <p class="case-description">脳梗塞、がん、救急医療など多数の医療記事が大手メディアに掲載</p>
+                </div>
+                <div class="case-item">
+                    <div class="case-category">DX支援</div>
+                    <h3 class="case-title">医療機関業務効率化</h3>
+                    <p class="case-description">現場ニーズに基づいた実践的なデジタル化支援</p>
+                </div>
+            </div>
+            <div class="cases-cta">
+                <a href="cases.html" class="cta-button secondary">すべての実績を見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">お知らせ</h2>
+            </div>
+            <div class="news-list">
+                <div class="news-item">
+                    <div class="news-date">2025.06.23</div>
+                    <div class="news-content">
+                        <h3 class="news-title">カルステップ新機能リリースのお知らせ</h3>
+                        <p class="news-summary">フットスイッチ操作の精度向上とUIの改善を行いました。</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2025.06.04</div>
+                    <div class="news-content">
+                        <h3 class="news-title">Yahoo!ニュースに医療記事が掲載されました</h3>
+                        <p class="news-summary">年末年始に注意すべき疾患についての記事が掲載されました。</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2024.02.02</div>
+                    <div class="news-content">
+                        <h3 class="news-title">医療機関DX支援サービスを本格開始</h3>
+                        <p class="news-summary">小規模医療機関向けのDX化支援コンサルティングを開始いたします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-subtitle">医療DXでお困りの際は、まずはお気軽にご相談ください</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form class="form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="company" class="form-label">会社名 <span class="required">*</span></label>
+                            <input type="text" id="company" name="company" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="form-label">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">電話番号 <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inquiry-type" class="form-label">お問い合わせ種別 <span class="required">*</span></label>
+                            <select id="inquiry-type" name="inquiry-type" class="form-select" required>
+                                <option value="">選択してください</option>
+                                <option value="karustep">AI音声入力『カルステップ』について</option>
+                                <option value="dx-support">医療機関DX化支援について</option>
+                                <option value="medical-writing">医療記事 執筆・監修について</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">お問い合わせ内容 <span class="required">*</span></label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="cta-button primary large">送信する</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>メールでのお問い合わせ</h4>
+                        <p class="contact-email">mjsc0mpa2@gmail.com</p>
+                        <p class="contact-response">24時間以内にご返信いたします</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img/mjs_logo.png" alt="合同会社MJSカンパニー" class="footer-logo">
+                    <p class="footer-tagline">現場の痛みを知る現役医師による医療DX支援</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-section">
+                        <h4>事業内容</h4>
+                        <ul>
+                            <li><a href="https://karustep.netlify.app/" target="_blank">AI音声入力『カルステップ』</a></li>
+                            <li><a href="#dx-support">医療機関DX化支援</a></li>
+                            <li><a href="#medical-writing">医療記事 執筆・監修</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>会社情報</h4>
+                        <ul>
+                            <li><a href="#about">私たちについて</a></li>
+                            <li><a href="#cases">実績・事例</a></li>
+                            <li><a href="#news">お知らせ</a></li>
+                            <li><a href="#contact">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>お問い合わせ</h4>
+                    <p>〒371-0116<br>群馬県前橋市富士見町原之郷1074-5</p>
+                    <p>Email: mjsc0mpa2@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 合同会社MJSカンパニー All Rights Reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">プライバシーポリシー</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="js/heroarea-animation.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
