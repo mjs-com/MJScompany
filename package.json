@@ -4,8 +4,7 @@
   "description": "このレポジトリはMJSカンパニーのコーポレートサイトコードです。\r 2025年6月27日に構築開始。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"Static site - no build step required\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
