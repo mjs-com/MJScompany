@@ -40,13 +40,110 @@
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* モバイル版での会社概要スタイル調整 */
+        @media (max-width: 768px) {
+            
+            /* 会社概要の横並び表示 */
+            .company-info-grid .info-item:not(.full-width) {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 0;
+                padding: 0.8rem;
+                background: var(--color-bg-light);
+                border-radius: 8px;
+            }
+            
+            .company-info-grid .info-item:not(.full-width) .info-label {
+                font-weight: 600;
+                color: var(--color-text);
+                min-width: 80px;
+                margin-right: 1rem;
+                flex-shrink: 0;
+            }
+            
+            .company-info-grid .info-item:not(.full-width) .info-value {
+                color: var(--color-text-light);
+                text-align: right;
+                flex: 1;
+                line-height: 1.4;
+            }
+            
+            /* 事業内容項目（縦並び維持） */
+            .company-info-grid .info-item.full-width {
+                display: block;
+                margin-bottom: 1.5rem;
+                padding: 1rem;
+                background: var(--color-bg-light);
+                border-radius: 8px;
+            }
+            
+            .company-info-grid .info-item.full-width .info-label {
+                font-weight: 600;
+                color: var(--color-text);
+                margin-bottom: 0.8rem;
+            }
+            
+            .company-info-grid .info-item.full-width .info-value {
+                color: var(--color-text-light);
+            }
+            
+            .business-list {
+                padding-left: 1.2rem;
+            }
+            
+            .business-list li {
+                margin-bottom: 0.5rem;
+                line-height: 1.5;
+            }
+            
+            .cert-text {
+            }
+            
+            /* 保有専門医資格の余白調整 */
+            .certifications-grid .cert-item {
+                margin-bottom: 0;
+            }
+            
+            .writing-description {
+                line-height: 1.5;
+            }
+            
+            /* 統計情報の余白調整 */
+            .writing-stats .stat-item {
+                margin-bottom: 0;
+            }
+            
+            /* 掲載記事の余白調整 */
+            .articles-list .article-item {
+                margin-bottom: 0;
+            }
+            
+            .article-title a {
+                line-height: 1.4;
+            }
+            
+            .article-source {
+            }
+            
+            /* 経歴リストの余白調整 */
+            .career-list li {
+                margin-bottom: 0;
+            }
+            
+
+        }
+
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="header-container">
             <div class="header-logo">
-                <a href="/">
+                <a href="index.html">
                     <img src="img/mjs_logo.png" alt="合同会社MJSカンパニー" class="logo-img">
                 </a>
             </div>
@@ -54,21 +151,21 @@
                 <nav class="header-nav">
                     <ul class="nav-list">
                         <li class="nav-item has-dropdown">
-                            <a href="#" class="nav-link">事業内容</a>
+                            <a href="index.html#services" class="nav-link">事業内容</a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://karustep.netlify.app/" target="_blank" class="dropdown-link">AI音声入力『カルステップ』</a></li>
-                                <li><a href="/#dx-support" class="dropdown-link">医療機関DX化支援</a></li>
-                                <li><a href="/#medical-writing" class="dropdown-link">医療記事 執筆・監修</a></li>
+                                <li><a href="index.html#dx-support" class="dropdown-link">医療機関DX化支援</a></li>
+                                <li><a href="index.html#medical-writing" class="dropdown-link">医療記事 執筆・監修</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a href="cases.html" class="nav-link">実績・事例</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link active">私たちについて</a></li>
-                        <li class="nav-item"><a href="/#news" class="nav-link">お知らせ</a></li>
-                        <li class="nav-item mobile-only"><a href="/#contact" class="nav-link cta-nav">お問い合わせ</a></li>
+                        <li class="nav-item"><a href="index.html#news" class="nav-link">お知らせ</a></li>
+                        <li class="nav-item mobile-only"><a href="contact.html" class="nav-link cta-nav">お問い合わせ</a></li>
                     </ul>
                 </nav>
                 <div class="header-cta">
-                    <a href="/#contact" class="cta-button primary">お問い合わせ</a>
+                    <a href="contact.html" class="cta-button primary">お問い合わせ</a>
                 </div>
             </div>
             <div class="mobile-menu-toggle">
@@ -89,49 +186,6 @@
         </div>
     </section>
 
-    <!-- Company Overview -->
-    <section class="company-overview">
-        <div class="container">
-            <div class="overview-content">
-                <div class="overview-text">
-                    <h2 class="section-title">会社概要</h2>
-                    <div class="company-info-grid">
-                        <div class="info-item">
-                            <div class="info-label">会社名</div>
-                            <div class="info-value">合同会社MJSカンパニー</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">代表者</div>
-                            <div class="info-value">丸山 詩歩、丸山 潤</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">所在地</div>
-                            <div class="info-value">〒371-0116 群馬県前橋市富士見町原之郷1074-5</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">電話番号</div>
-                            <div class="info-value">027-288-8307</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">設立</div>
-                            <div class="info-value">2022年12月22日</div>
-                        </div>
-                        <div class="info-item full-width">
-                            <div class="info-label">事業内容</div>
-                            <div class="info-value">
-                                <ol class="business-list">
-                                    <li>AI音声入力支援ツール『カルステップ』の開発・販売</li>
-                                    <li>小規模医療機関向けDX化支援コンサルティング</li>
-                                    <li>医療関連記事の執筆・監修サービス</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Company Vision -->
     <section class="company-vision">
         <div class="container">
@@ -141,8 +195,8 @@
                     <h3 class="vision-headline">「現場の痛みを知る現役医師だから、提案できる解決策がある」</h3>
                     <p class="vision-description">
                         私たちは、医療現場の最前線で日々患者と向き合う現役医師が率いる、医療課題解決の専門家チームです。
-                        机上の空論ではない、現場のリアルな課題感に基づいたソリューションを提供することをお約束します。
-                        AI技術と医療現場の深い知見を掛け合わせ、医療従事者の負担を軽減し、患者と向き合うための豊かな時間を創出することで、
+                        <br>机上の空論ではない、現場のリアルな課題感に基づいたソリューションを提供することをお約束します。
+                        <br>AI技術と医療現場の深い知見を掛け合わせ、医療従事者の負担を軽減し、<br class="desktop-only">患者と向き合うための豊かな時間を創出することで、
                         日本の医療の未来に貢献します。
                     </p>
                 </div>
@@ -260,7 +314,7 @@
     <section class="writing-experience">
         <div class="container">
             <div class="writing-content">
-                <h3 class="subsection-title">Webライター・監修者としての実績</h3>
+                <h3 class="subsection-title">Webライター・監修者・メディア出演としての実績</h3>
                 <div class="writing-overview">
                     <div class="writing-stats">
                         <div class="stat-item">
@@ -275,16 +329,21 @@
                             <div class="stat-number">大量</div>
                             <div class="stat-label">記事制作ディレクション実績</div>
                         </div>
+                        <div class="stat-item">
+                            <div class="stat-number">複数</div>
+                            <div class="stat-label">テレビ・報道番組出演</div>
+                        </div>
                     </div>
                     <p class="writing-description">
                         大手Webメディアにて医療関連記事の執筆・監修を多数担当。<br>
                         2年以上にわたり、医療記事ライターチームのマネージャーとして大量の記事制作をディレクション。<br>
-                        Yahoo!ニュースなど、大手ニュースサイトへの記事掲載実績多数。
+                        Yahoo!ニュースなど、大手ニュースサイトへの記事掲載実績多数。<br>
+                        ABEMA Primeなど、テレビ・報道番組にも医療専門家として出演。
                     </p>
                 </div>
 
                 <div class="featured-articles">
-                    <h4>代表的な掲載記事</h4>
+                    <h4>代表的な掲載記事・メディア出演</h4>
                     <div class="articles-list">
                         <div class="article-item">
                             <div class="article-title">
@@ -326,6 +385,14 @@
                             </div>
                             <div class="article-source">Yahoo!ニュース</div>
                         </div>
+                        <div class="article-item">
+                            <div class="article-title">
+                                <a href="https://abema.tv/video/episode/89-66_s99_p5892" target="_blank" rel="noopener">
+                                    代表 丸山潤が報道番組（テーマ：シートベルト外傷）に出演しました
+                                </a>
+                            </div>
+                            <div class="article-source">ABEMA Prime</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -359,14 +426,56 @@
         </div>
     </section>
 
+    <!-- Company Overview -->
+    <section class="company-overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2 class="section-title">会社概要</h2>
+                    <div class="company-info-grid">
+                        <div class="info-item">
+                            <div class="info-label">会社名</div>
+                            <div class="info-value">合同会社MJSカンパニー</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">代表者</div>
+                            <div class="info-value">丸山 詩歩、丸山 潤</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">所在地</div>
+                            <div class="info-value">〒371-0116 群馬県前橋市富士見町原之郷1074-5</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">電話番号</div>
+                            <div class="info-value">027-288-8307</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">設立</div>
+                            <div class="info-value">2022年12月22日</div>
+                        </div>
+                        <div class="info-item full-width">
+                            <div class="info-label">事業内容</div>
+                            <div class="info-value">
+                                <ol class="business-list">
+                                    <li>AI音声入力支援ツール『カルステップ』の開発・販売</li>
+                                    <li>小規模医療機関向けDX化支援コンサルティング</li>
+                                    <li>医療関連記事の執筆・監修サービス</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Contact CTA -->
     <section class="contact-cta">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">お気軽にお問い合わせください</h2>
-                <p class="cta-subtitle">医療DXに関するご相談、サービスについてのお問い合わせをお待ちしております</p>
+                <p class="cta-subtitle">医療DXや記事執筆監修に関するご相談、サービスについてのお問い合わせをお待ちしております</p>
                 <div class="cta-buttons">
-                    <a href="/#contact" class="cta-button primary large">お問い合わせする</a>
+                    <a href="contact.html" class="cta-button primary large">お問い合わせする</a>
                     <a href="cases.html" class="cta-button secondary large">実績を見る</a>
                 </div>
             </div>
@@ -386,8 +495,8 @@
                         <h4>事業内容</h4>
                         <ul>
                             <li><a href="https://karustep.netlify.app/" target="_blank">AI音声入力『カルステップ』</a></li>
-                            <li><a href="/#dx-support">医療機関DX化支援</a></li>
-                            <li><a href="/#medical-writing">医療記事 執筆・監修</a></li>
+                            <li><a href="index.html#dx-support">医療機関DX化支援</a></li>
+                            <li><a href="cases.html#writing">医療記事 執筆・監修</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
@@ -395,15 +504,15 @@
                         <ul>
                             <li><a href="about.html">私たちについて</a></li>
                             <li><a href="cases.html">実績・事例</a></li>
-                            <li><a href="/#news">お知らせ</a></li>
-                            <li><a href="/#contact">お問い合わせ</a></li>
+                            <li><a href="index.html#news">お知らせ</a></li>
+                            <li><a href="contact.html">お問い合わせ</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-contact">
                     <h4>お問い合わせ</h4>
                     <p>〒371-0116<br>群馬県前橋市富士見町原之郷1074-5</p>
-                    <p>Email: mjsc0mpa2@gmail.com</p>
+                    <p>Email: <a href="mailto:mjsc0mpa2@gmail.com">mjsc0mpa2@gmail.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -411,7 +520,9 @@
                     <p>&copy; 2024 合同会社MJSカンパニー All Rights Reserved.</p>
                 </div>
                 <div class="footer-legal">
-                    <a href="#">プライバシーポリシー</a>
+                    <a href="privacy.html">プライバシーポリシー</a>
+                    <span class="legal-separator">|</span>
+                    <a href="terms.html">利用規約</a>
                 </div>
             </div>
         </div>

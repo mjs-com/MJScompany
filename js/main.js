@@ -14,10 +14,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // モバイルメニューのリンクをクリックした時にメニューを閉じる
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
+                // 事業内容のリンクをクリックした場合のモバイル版対応
+                if (this.textContent.includes('事業内容') && !this.getAttribute('href')) {
+                    e.preventDefault();
+                    window.location.href = 'index.html#services';
+                    return;
+                }
+                
                 mobileMenuToggle.classList.remove('active');
                 headerNav.classList.remove('active');
+            }
+        });
+    });
+
+    // モバイル版での事業内容ドロップダウンメニュー制御
+    const businessMenus = document.querySelectorAll('.has-dropdown');
+    businessMenus.forEach(menu => {
+        menu.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                window.location.href = 'index.html#services';
             }
         });
     });
