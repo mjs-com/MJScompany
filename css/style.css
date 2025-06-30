@@ -450,12 +450,12 @@ a {
   }
   
   h2, .section-title {
-    font-size: 18px; /* 1.125rem - h1より小さく調整 */
+    font-size: 22px; /* 18px → 22px に拡大 */
     line-height: 1.3;
   }
   
   h3, .service-title {
-    font-size: 16px; /* 1rem - 階層を明確にするため調整 */
+    font-size: 20px; /* 16px → 20px に拡大 */
     line-height: 1.3;
   }
   
@@ -1007,7 +1007,9 @@ a {
 
 .proof-item i {
   color: var(--color-accent-mid);
-  width: 16px;
+  width: 20px;
+  flex-shrink: 0;
+  text-align: left !important;
 }
 
 .service-cta {
@@ -1841,6 +1843,15 @@ textarea:focus {
   color: var(--color-white);
 }
 
+/* デスクトップ版では desktop-text を表示、mobile-text を非表示 */
+.filter-tab .desktop-text {
+  display: inline;
+}
+
+.filter-tab .mobile-text {
+  display: none;
+}
+
 /* Cases Content */
 .cases-content {
   padding: var(--spacing-4xl) 0;
@@ -2402,6 +2413,8 @@ textarea:focus {
   background-color: var(--color-bg-light);
 }
 
+
+
 /* Mobile Responsive for About & Cases Pages */
 @media (max-width: 768px) {
   .page-hero {
@@ -2449,7 +2462,28 @@ textarea:focus {
   .filter-tabs {
     justify-content: flex-start;
     overflow-x: auto;
-    padding: 0 var(--spacing-md);
+    padding: 0 0 0 var(--spacing-md); /* 右側のpaddingを0に */
+    gap: var(--spacing-xs); /* gapを小さく */
+  }
+  
+  /* filter-tabのサイズを調整してモバイルでの2行表示に最適化 */
+  .filter-tab {
+    padding: 12px 20px; /* 横幅を広くするため左右paddingを増加 */
+    font-size: 20px; /* フォントサイズをさらに小さく */
+    white-space: nowrap; /* テキストの改行を防ぐ */
+    flex-shrink: 0; /* ボタンサイズを固定 */
+    border-width: 1px; /* ボーダーを薄く */
+    min-width: 120px; /* 最小幅を設定してボタンサイズを統一 */
+    text-align: center; /* ボタン内のテキストを中央揃えに */
+  }
+  
+  /* モバイル版ではdesktop-textを非表示にして、mobile-textを表示 */
+  .filter-tab .desktop-text {
+    display: none;
+  }
+  
+  .filter-tab .mobile-text {
+    display: inline;
   }
   
   .impact-grid {
@@ -2539,5 +2573,163 @@ textarea:focus {
   
   .contact-content {
     padding: 0;
+  }
+  
+  /* モバイル版ではお問い合わせセクションの改行を非表示 */
+  .contact .section-subtitle br {
+    display: none;
+  }
+  
+  /* contact.htmlの改行も非表示（確実性のため） */
+  #contact .section-subtitle br {
+    display: none;
+  }
+  
+  /* モバイル版では本文テキストを左詰めに変更 */
+  p,
+  .section-subtitle,
+  .service-tagline,
+  .vision-text,
+  .case-description,
+  .case-summary,
+  .news-summary,
+  .article-summary,
+  .contact-response,
+  .writing-description,
+  .product-description,
+  .vision-description,
+  .cta-subtitle,
+  .page-subtitle,
+  .footer-tagline,
+  .strength-content p,
+  .expertise-content p {
+    text-align: left !important;
+  }
+  
+  /* strength-content の p要素を左揃えに */
+  .strength-content p {
+    text-align: left !important;
+  }
+  
+  /* その他の本文関連要素も左詰めに */
+  .pain-list,
+  .features-list,
+  .career-list,
+  .articles-list,
+  .business-list {
+    text-align: left !important;
+  }
+  
+  /* リスト項目も左詰めに */
+  .pain-list li,
+  .features-list li,
+  .career-list li,
+  .articles-list li,
+  .business-list li,
+  .service-features li,
+  .pain-points ul li,
+  .strength-details li {
+    text-align: left !important;
+  }
+  
+  /* 特定の要素は中央揃えを維持 */
+  .hero-subtitle,
+  .service-tagline {
+    text-align: center !important;
+  }
+  
+  /* section-subtitleは基本的に左揃えに変更 */
+  .section-subtitle {
+    text-align: left !important;
+  }
+  
+  /* 但し、cases セクションの section-subtitle だけは中央揃えを維持 */
+  .cases .section-subtitle {
+    text-align: center !important;
+  }
+  
+  /* services セクションの section-subtitle の改行を非表示 */
+  .services .section-subtitle br {
+    display: none;
+  }
+  
+  /* authority-proof のアイコンとテキストを確実に左揃えに */
+  .authority-proof {
+    text-align: left !important;
+  }
+  
+  .proof-item {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  
+  .proof-item i {
+    text-align: left !important;
+    width: 20px !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+  }
+  
+  /* 医療記事執筆・監修セクションのタグラインの改行位置をモバイル版で調整 */
+  .desktop-break {
+    display: none;
+  }
+  
+  .mobile-break::after {
+    content: "\A";
+    white-space: pre;
+  }
+  
+  /* vision-text を確実に左揃えにする */
+  .vision-text {
+    text-align: left !important;
+    padding: 16px;
+  }
+  
+  /* case-description、case-summary と news-summary を確実に左揃えにする */
+  .case-description,
+  .case-summary,
+  .news-summary {
+    text-align: left !important;
+  }
+  
+  /* cases.html特有のp要素も確実に左揃えに */
+  .visual-caption,
+  .step-content p,
+  .problem-card p,
+  .impact-label,
+  .stat-label,
+  .article-meta,
+  .footer-contact p,
+  .footer-copyright p {
+    text-align: left !important;
+  }
+  
+  /* vision-title のフォントサイズを小さくし、改行を追加 */
+  .vision-title {
+    font-size: 22px !important; /* 一回り小さく */
+  }
+  
+  .mobile-break-vision::after {
+    content: "\A";
+    white-space: pre;
+  }
+  
+  /* vision-title のカギ括弧をモバイル版で非表示 */
+  .vision-title .quote-bracket {
+    display: none;
+  }
+  
+  /* cases.html の page-subtitle の改行位置をモバイル版で調整 */
+  .mobile-break-cases::after {
+    content: "\A";
+    white-space: pre;
+  }
+  
+  /* category-title の改行位置をモバイル版で調整 */
+  .mobile-break-category::after {
+    content: "\A";
+    white-space: pre;
   }
 }
