@@ -2690,7 +2690,10 @@ textarea:focus {
   p.hero-subtitle,
   .hero-content .hero-subtitle,
   .hero-content p.hero-subtitle,
-  .service-tagline {
+  .service-tagline,
+  p.service-tagline,
+  .service-content .service-tagline,
+  .service-card .service-tagline {
     text-align: center !important;
   }
   
@@ -2876,4 +2879,12 @@ section.contact .section-subtitle,
 .contact-cta p.cta-subtitle {
   padding-left: 16px;
   padding-right: 16px;
+}
+
+/* デスクトップ版でcta-subtitleの改行を確実に表示 */
+@media (min-width: 769px) {
+  .contact-cta .cta-subtitle br,
+  .cta-subtitle br {
+    display: inline;
+  }
 }
