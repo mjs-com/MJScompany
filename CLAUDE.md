@@ -69,7 +69,7 @@ This is a corporate website for 合同会社MJSカンパニー (MJS Company LLC)
 ```
 Header Navigation:
 ├── 事業内容 (Services) [Dropdown]
-│   ├── AI音声入力『カルステップ』 → External LP (https://karustep.netlify.app/)
+│   ├── AI音声入力『カルステップ』 → External LP (https://mjs-com.github.io/karustep-LP/)
 │   ├── 医療機関DX化支援 → Anchor link on index.html
 │   └── 医療記事 執筆・監修 → Dedicated page
 ├── 実績・事例 (Cases) → cases.html
@@ -119,7 +119,7 @@ Header Navigation:
 - Medical/healthcare focused keywords
 
 ### External Links
-- **KaruStep Product LP**: https://karustep.netlify.app/
+- **KaruStep Product LP**: https://mjs-com.github.io/karustep-LP/
 - **Yahoo News Articles**: Multiple medical content examples in company-info.md
 
 ## Development Commands
