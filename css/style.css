@@ -1183,6 +1183,21 @@ a {
   text-align: center;
 }
 
+.news-loading {
+  color: var(--color-text-light);
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.news-load-error {
+  color: var(--color-text-light);
+}
+
+.news-load-error a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
 /* Contact Section */
 .contact {
   padding: var(--spacing-4xl) 0;
